@@ -18,7 +18,8 @@ main{
 
 .container3{
     background: rgb(4, 20, 142);
-    border-radius: 10px;
+    border-bottom-left-radius: 50px;
+    border-top-right-radius: 50px;
 }
 .container4{
     border-bottom: solid 2px rgb(119, 116, 116);
@@ -33,7 +34,8 @@ form input{
     width: 100%;
     padding: 5px 15px;
     font-family: 'Times New Roman', Times, serif;
-    border-radius: 2px;
+    border-bottom-left-radius: 20px;
+    border-top-right-radius: 20px;
     border: none;
 }
 
@@ -43,12 +45,14 @@ select {
     color: gray;
     height: 45px;
     border: none;
-    border-radius: 3px;
+    border-bottom-left-radius: 20px;
+    border-top-right-radius: 20px;
 }
 
 
 .btn {
-    padding-left: 40%;
+    padding-left: 30%;
+    
     
 }
 
@@ -57,10 +61,11 @@ button, .a-btn{
     justify-items: center;
     background-image:   linear-gradient(45deg, rgba(255,0,0,0), rgb(96, 149, 213));
     width: 100%;
-    margin-top: 10px;
+    margin-top: 30px;
     padding: 10px;
     border: none;
-    /* color: #fff; */
+    border-bottom-left-radius: 20px;
+    border-top-right-radius: 20px;
     transition: 0.9s;
 }
 

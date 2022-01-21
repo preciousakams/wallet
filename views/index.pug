@@ -8,7 +8,7 @@ block content
                         | Test Mode
                 .container.pt-3
                     form(name='myForm', action='/paystack/pay', method='POST')
-                        input#name(type='text', name='full_name', placeholder='Full Nname')
+                        input#name(type='text', name='full_name', placeholder='Full Name')
                         hr
                         input#email(type='email', name='email', placeholder='Email')
                         hr
@@ -17,5 +17,8 @@ block content
                             option(value='500') 500
                             option(value='1000') 1000
                             option(value='2000') 2000
+                            option(value='3000') 3000
+                            option(value='4000') 4000
+                            option(value='5000') 5000
                         .btn.pt-2
-                            button(type='submit') DONATE
+                            button(type='submit') Pay Now 
