@@ -9,7 +9,7 @@ const request = require('request');
 const pug = require('pug');
 const _ = require('lodash');
 const path = require('path');
-const {Donor} =  require('./models/donor');
+const {Payment} =  require('./models/payment');
 const { response } = require('express');
 const { rmdirSync } = require('fs');
 const {initializePayment, verifyPayment} = require ('./config/paystack') (request);
@@ -62,12 +62,12 @@ app.get('/paystack/callback', (req,res) => {
        'metadata.full_name'
       ]);
       [reference,amount,email,full_name] = data;
-      newDonor = {reference,amount,email,full_name} 
+      newPayment = {reference,amount,email,full_name} 
 
-      const donor = new Donor(newDonor)
-      donor.save().then((donor)=> {
-        if(donor) {
-          res.redirect('/receipt/'+donor._id);
+      const payment = new Payment(newPayment)
+      payment.save().then((payment)=> {
+        if(payment) {
+          res.redirect('/receipt/'+payment._id);
         }
       }).catch((e) =>{
         res.redirect('/error');

@@ -1,6 +1,6 @@
 const mongoose = require('mongoose');
 
-const donorSchema = new mongoose.Schema({
+const paymentSchema = new mongoose.Schema({
     full_name: {
         type: String,
         required: true,
@@ -19,5 +19,5 @@ const donorSchema = new mongoose.Schema({
     }
     });
     
-    const Donor = mongoose.model('Donor', donorSchema);
-    module.exports = {Donor}
+    const Payment = mongoose.model('Payment', paymentSchema);
+    module.exports = {Payment}
