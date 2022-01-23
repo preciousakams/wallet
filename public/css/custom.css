@@ -56,7 +56,6 @@ select {
     
 }
 
-
 button, .a-btn{
     justify-items: center;
     background-image:   linear-gradient(45deg, rgba(255,0,0,0), rgb(96, 149, 213));

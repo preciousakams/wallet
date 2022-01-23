@@ -75,11 +75,28 @@ app.get('/paystack/callback', (req,res) => {
 
   })
 });
-
-app.post('/feedback', (req,res) => {
-  console.log(req.body)
-  rmdirSync.status(200).end()
+app.get('/receipt/:id', (req, res)=>{
+  const id = req.params.id;
+  Payment.findById(id).then((payment)=>{
+      if(!payment){
+          //handle error when the donor is not found
+          res.redirect('/error')
+      }
+      res.render('success.pug',{payment});
+  }).catch((e)=>{
+      res.redirect('/error')
+  })
 })
+
+app.get('/error', (req, res)=>{
+  res.render('error.pug');
+})
+
+// webhook
+// app.post('/feedback', (req,res) => {
+//   console.log(req.body)
+//   rmdirSync.status(200).end()
+// })
 
 
 

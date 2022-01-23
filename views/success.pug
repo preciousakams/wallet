@@ -2,6 +2,11 @@ extends layout
 block content
     main
         .row.justify-content-center
-            .col-lg-6.container3.text-white.p-3
-                .container.p-5
-                    h3.text-center #{payment.full_name} your transaction of NGN #{payment.amount/100}  was successful  
+            .col-lg-12.container3.text-white
+                .container.p-2
+                h2.text-center Transaction Receipt
+                h3 Transaction Status: Successful 
+                h3 Full Name: #{payment.full_name} 
+                h3 Amount Paid: #{payment.amount/100}
+                h3 Transaction Id: #{payment._id} 
+                h2.text-center Thanks for your patronage
