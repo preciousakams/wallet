@@ -1,5 +1,5 @@
 const paystack = (request) => {
-    const MySecertKey = 'Bearer sk_test_95eb60bb1b3aff2ad679b0cac2ec1c41f4b840e2';
+    const MySecertKey = process.env.SECRET_KEY;
     
     const initializePayment = (form, mycallback) => {
         const options = {

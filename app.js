@@ -79,7 +79,7 @@ app.get('/receipt/:id', (req, res)=>{
   const id = req.params.id;
   Payment.findById(id).then((payment)=>{
       if(!payment){
-          //handle error when the donor is not found
+          //handle error when the client is not found
           res.redirect('/error')
       }
       res.render('success.pug',{payment});
