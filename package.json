@@ -10,7 +10,7 @@
   "author": "kamzzy",
   "license": "ISC",
   "dependencies": {
-    "dotenv": "^14.2.0",
+    "dotenv": "^14.3.2",
     "express": "^4.17.2",
     "lodash": "^4.17.21",
     "mongoose": "^6.1.7",

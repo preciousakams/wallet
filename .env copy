@@ -1,0 +1,5 @@
+MONGO_URI='mongodb+srv:....etc'
+
+// rename this file to .env
+// copy your mongodb url connection and paste above 
+// change paystack pay redirect to your paystack url
